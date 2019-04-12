@@ -29,6 +29,7 @@
                         <th>Email</th>
                         <th>No HP</th>
                         <th>Alamat</th>
+                        <th>Nama Pulau</th>
                         <th>Total Orang</th>
                         <th>Tanggal Penyewaan</th>
                         <th>Pesan</th>
@@ -46,6 +47,7 @@
                             <td>{{$inquire->user->email}}</td>
                             <td>{{$inquire->user->no_hp}}</td>
                             <td>{{$inquire->user->alamat}}</td>
+                            <td>{{$inquire->pulau->nama_pulau}}</td>
                             <td>{{$inquire->total_orang}}</td>
                             <td>{{$inquire->tanggal}}</td>
                             <td>{{$inquire->pesan}}</td>

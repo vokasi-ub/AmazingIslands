@@ -220,8 +220,10 @@
                   </div>
                   <div class="aa-properties-about">
                     <h3><a href="rangyai">{{$rangyai->nama_pulau}}</a></h3>
-                    <p>Terletak di sebelah timur pulau Phuket, sebuah pulau yang populer di kalangan 
-                    wisatawan dan pemilik tanah, Rangyai adalah pulau terbesar ...</p>
+                    <p style="overflow:hidden; text-overflow:ellipsis; display: -webkit-box;
+                                      -webkit-box-orient: vertical;
+                                      -webkit-line-clamp: 3;
+                                      line-height: 1.49;">{{$rangyai->deskripsi}}}</p>
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
@@ -251,8 +253,10 @@
                   </div>
                   <div class="aa-properties-about">
                     <h3><a href="eshpabekong">{{$es->nama_pulau}}</a></h3>
-                    <p>Sebuah pulau besar granit Precambrian berwarna merah muda dan abu-abu berangsur-angsur menuju 
-                    air yang berkilauan dengan... </p>
+                    <p style="overflow:hidden; text-overflow:ellipsis; display: -webkit-box;
+                                      -webkit-box-orient: vertical;
+                                      -webkit-line-clamp: 3;
+                                      line-height: 1.49;">{{$es->deskripsi}}}</p>
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
@@ -282,8 +286,10 @@
                   </div>
                   <div class="aa-properties-about">
                     <h3><a href="little">{{$little->nama_pulau}}</a></h3>
-                    <p>Luar biasa baru kustom high end 5 kamar tidur, 6 kamar mandi rumah di pulau pribadi.
-                     Pulau pribadi Anda sendiri!</p>
+                    <p style="overflow:hidden; text-overflow:ellipsis; display: -webkit-box;
+                                      -webkit-box-orient: vertical;
+                                      -webkit-line-clamp: 3;
+                                      line-height: 1.49;">{{$little->deskripsi}}}</p>
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
@@ -313,8 +319,10 @@
                   </div>
                   <div class="aa-properties-about">
                     <h3><a href="lambay">{{$lambay->nama_pulau}}</a></h3>
-                    <p>Akses mudah ke penyelaman luar biasa adalah salah satu fasilitas khusus kepemilikan pulau 
-                    pribadi tropis, tetapi hanya beberapa...</p>
+                    <p style="overflow:hidden; text-overflow:ellipsis; display: -webkit-box;
+                                      -webkit-box-orient: vertical;
+                                      -webkit-line-clamp: 3;
+                                      line-height: 1.49;">{{$lambay->deskripsi}}}</p>
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
@@ -344,8 +352,10 @@
                   </div>
                   <div class="aa-properties-about">
                     <h3><a href="macan">{{$macan->nama_pulau}}</a></h3>
-                    <p> Orang tidak akan mengira bahwa hanya dua jam perjalanan singkat dengan speedboat dari kota metropolitan
-                     yaitu Jakarta, Anda akan...</p>
+                    <p style="overflow:hidden; text-overflow:ellipsis; display: -webkit-box;
+                                      -webkit-box-orient: vertical;
+                                      -webkit-line-clamp: 3;
+                                      line-height: 1.49;">{{$macan->deskripsi}}}</p>
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
@@ -375,8 +385,10 @@
                   </div>
                   <div class="aa-properties-about">
                     <h3><a href="cave">{{$cave->nama_pulau}}</a></h3>
-                    <p>Jarang ada pulau dengan atribut Cave Cay yang tersedia. Keindahan alam yang 
-                    menakjubkan, pelabuhan dan marina perairan dalam yang...</p>
+                    <p style="overflow:hidden; text-overflow:ellipsis; display: -webkit-box;
+                                      -webkit-box-orient: vertical;
+                                      -webkit-line-clamp: 3;
+                                      line-height: 1.49;">{{$cave->deskripsi}}}</p>
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">

@@ -22,6 +22,6 @@ class AdminController extends Controller
         $query = $request->get('q');
         $pulau = PulauModel::where('nama_pulau', 'LIKE', '%' . $query . '%')->paginate(10);
 
-        return view('tb_pulau', compact('pulau', 'query'));
+        return view('backend/tb_pulau', compact('pulau', 'query'));
     }
 }

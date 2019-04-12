@@ -11,6 +11,7 @@ Route::get('/little', 'IndexController@little');
 Route::get('/lambay', 'IndexController@lambay');
 Route::get('/macan', 'IndexController@macan');
 Route::get('/cave', 'IndexController@cave');
+Route::post('/storeInquire', 'IndexController@storeInquire');
 
 
 Auth::routes();
@@ -33,7 +34,9 @@ Route::get('/create','PulauController@create');
 Route::post('/store','PulauController@store');
 Route::get('/edit/{id}','PulauController@edit');
 Route::post('/update/{id}','PulauController@update');
+Route::post('get', 'PulauController@getRequest');
 Route::get('hapus/{id}','PulauController@hapus');
+Route::post ( '/editItem', 'PulauController@editItem' );
 
 // crud Inquire
 Route::get('tb_inquire', 'InquireController@index');

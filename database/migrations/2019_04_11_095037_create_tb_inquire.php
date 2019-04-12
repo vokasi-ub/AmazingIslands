@@ -16,6 +16,7 @@ class CreateTbInquire extends Migration
         Schema::create('tb_inquire', function (Blueprint $table) {
             $table->bigIncrements('id_inquire');
             $table->integer('user_id');
+            $table->integer('id_pulau');
             $table->integer('total_orang');
             $table->date('tanggal');
             $table->text('pesan');

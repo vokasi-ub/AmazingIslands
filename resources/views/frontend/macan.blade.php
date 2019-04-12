@@ -115,7 +115,6 @@
                <h4>Property Video</h4>
                <iframe width="100%" height="480" src="https://www.youtube.com/embed/CegXQps0In4" frameborder="0" allowfullscreen></iframe>
                <h4>Property Map</h4>
-               @endforeach
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6851.201919469417!2d-86.11773906635584!3d33.47324776828677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888bdb60cc49c571%3A0x40451ca6baf275c7!2s36008+AL-77%2C+Talladega%2C+AL+35160%2C+USA!5e0!3m2!1sbn!2sbd!4v1460452919256" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
              </div>
              <!-- Properties social share -->
@@ -211,58 +210,23 @@
           <aside class="aa-properties-sidebar">
             <!-- Start Single properties sidebar -->
             <div class="aa-properties-single-sidebar">
-              <h3>Properties Search</h3>
+              <h3>Detail Pulau</h3>
+              <hr style="border-width: 3px; border-color: deepskyblue">
               <form action="">
                 <div class="aa-single-advance-search">
-                  <input type="text" placeholder="Type Your Location">
+                <b>Status &nbsp;&nbsp;&nbsp;: {{$macan->status}}</b>
                 </div>
                 <div class="aa-single-advance-search">
-                  <select id="" name="">
-                   <option selected="" value="0">Category</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
+                <b>Negara &nbsp;: {{$macan->nama_negara}}</b>
                 </div>
                 <div class="aa-single-advance-search">
-                  <select id="" name="">
-                    <option selected="" value="0">Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
+                <b>Lokasi &nbsp;&nbsp;: {{$macan->lokasi}}</b>
                 </div>
                 <div class="aa-single-advance-search">
-                  <select id="" name="">
-                    <option selected="" value="0">Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-                </div>
-                <div class="aa-single-filter-search">
-                  <span>AREA (SQ)</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower" class="example-val">30.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper" class="example-val">100.00</span>
-                  <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>                  
-                </div>
-                <div class="aa-single-filter-search">
-                  <span>PRICE ($)</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower2" class="example-val">30.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper2" class="example-val">100.00</span>
-                  <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>      
+                <b>Luas &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$macan->luas}} Acres<b>
                 </div>
                 <div class="aa-single-advance-search">
-                  <input type="submit" value="Search" class="aa-search-btn">
+                <br><a class="aa-secondary-btn" href="maacan">Inquire Now</a>
                 </div>
               </form>
             </div> 
@@ -270,6 +234,95 @@
             
   </section>
   <!-- / Properties  -->
+  <section id="aa-contact">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+          <div class="aa-contact-area">
+            <div class="aa-contact-bottom">
+              <div class="aa-title">
+                <h2>Inquire About This Island</h2>
+                <span></span>
+                <p>You must <a href="{{ route('login') }}"><u>login</u></a> or <a href="{{ route('register') }}"><u>register</u></a> for inquire this island <strong class="required">*</strong></p>
+              </div>
+              <div class="aa-contact-form">
+                <form class="contactform" action="storeInquire" method="post" enctype="multipart/form-data">
+                        {{ csrf_field() }}
+                  <p class="comment-form-author">
+                    <input type="text" name="id_pulau" value="{{$macan->id_pulau }}" size="30" required="required" style="display:none">
+                  </p>
+                  @endforeach  
+                  @if(auth()->check())                
+                  <p class="comment-form-author">
+                    <label for="author">Name <span class="required">*</span></label>
+                    <input type="text" value="{{ Auth::user()->name }}" size="30" required="required">
+                  </p>
+                  <p class="comment-form-author">
+                    <input type="text" name="user_id" value="{{ Auth::user()->id }}" size="30" required="required" style="display:none">
+                  </p>
+                  @else
+                  <p class="comment-form-author">
+                    <label for="author">Name <span class="required">*</span></label>
+                    <input type="text" name="name" value="" size="30" required="required">
+                  </p>
+                  @endif             
+                  @if(auth()->check())  
+                  <p class="comment-form-email">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" name="email" value="{{ Auth::user()->email }}" aria-required="true" required="required">
+                  </p>
+                  @else
+                  <p class="comment-form-email">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" name="email" value="" aria-required="true" required="required">
+                  </p>
+                  @endif
+                  @if(auth()->check())
+                  <p class="comment-form-url">
+                    <label for="subject">Nomor HP</label>
+                    <input type="text" name="no_hp" value="{{ Auth::user()->no_hp }}">  
+                  </p>
+                  @else
+                  <p class="comment-form-url">
+                    <label for="subject">Nomor HP</label>
+                    <input type="text" name="no_hp">  
+                  </p>
+                  @endif
+                  @if(auth()->check())
+                  <p class="comment-form-comment">
+                    <label for="alamat">Alamat</label>
+                    <textarea name="alamat" cols="45" rows="8" aria-required="true" required="required">{{ Auth::user()->alamat }}</textarea>
+                  </p>
+                  @else
+                  <p class="comment-form-comment">
+                    <label for="alamat">Alamat</label>
+                    <textarea name="alamat" cols="45" rows="8" aria-required="true" required="required"></textarea>
+                  </p>
+                  @endif
+                  <p class="comment-form-author">
+                    <label for="author">Total Orang </label>
+                    <input type="text" name="total_orang" value="" size="30" required="required">
+                  </p>
+                  <p class="comment-form-author">
+                    <label for="author">Tanggal Penyewaan </label>
+                    <input type="date" name="tanggal" value="" size="30" required="required">
+                  </p>
+                  <p class="comment-form-comment">
+                    <label for="comment">Pesan</label>
+                    <textarea name="pesan" cols="45" rows="8" aria-required="true" required="required"></textarea>
+                  </p>                 
+                  <p class="form-submit">
+                    <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
+                  </p>        
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+       </div>
+     </div>
+   </div>
+ </section>
 
   <!-- Footer -->
   <footer id="aa-footer">
