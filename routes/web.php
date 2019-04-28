@@ -40,7 +40,13 @@ Route::post ( '/editItem', 'PulauController@editItem' );
 
 // crud Inquire
 Route::get('tb_inquire', 'InquireController@index');
+Route::get('keyword', 'InquireController@paginate');
+Route::get('hapus/{id}','InquireController@hapus');
+
+// crud User
+Route::get('tb_user', 'UserController@index');
+Route::get('keywords', 'UserController@paginate2');
+Route::get('hapus/{id}','UserController@hapus');
 
 //searching
-Route::get('query', 'AdminController@search');
 Route::get('query', 'AdminController@search');  

@@ -51,8 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="radio" name="sections" id="option1" checked>
 					<label for="option1" class="icon-left-w3pvt"><span class="fa fa-user-circle" aria-hidden="true"></span>Login</label>
 					<article>
-                    <form method="POST" action="{{ route('admin.login.submit') }}">
-                    @csrf
+                    <form method="POST" action="{{ route('login') }}">
 							<h3 class="legend">Login Here</h3>
 							<div class="input">
 								<span class="fa fa-envelope-o" aria-hidden="true"></span>
@@ -81,42 +80,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="radio" name="sections" id="option2">
 					<label for="option2" class="icon-left-w3pvt"><span class="fa fa-pencil-square" aria-hidden="true"></span>Register</label>
 					<article>
-                    <form method="POST" action="{{ route('admin.store') }}">
-                    @csrf
-							
+						<form action="#" method="post">
+							<h3 class="legend">Register Here</h3>
 							<div class="input">
 								<span class="fa fa-user-o" aria-hidden="true"></span>
-                                <input id="name" type="text" placeholder="Nama" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                    @if ($errors->has('name'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('name') }}</strong>
-                                        </span>
-                                    @endif
+								<input type="text" placeholder="Username" name="name" required />
 							</div>
 							<div class="input">
-								<span class="fa fa-envelope-o" aria-hidden="true"></span>
-                                <input id="email" type="email" placeholder="Email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                    @if ($errors->has('email'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('email') }}</strong>
-                                        </span>
-                                    @endif
-							</div>
-                            <div class="input">
 								<span class="fa fa-key" aria-hidden="true"></span>
-								<input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+								<input type="password" placeholder="Password" name="password" required />
 							</div>
-                            <div class="input">
+							<div class="input">
 								<span class="fa fa-key" aria-hidden="true"></span>
-								<input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control" name="password_confirmation" required>
+								<input type="password" placeholder="Confirm Password" name="password" required />
 							</div>
 							<button type="submit" class="btn submit">Register</button>
 						</form>

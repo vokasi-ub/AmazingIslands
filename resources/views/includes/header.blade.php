@@ -19,7 +19,7 @@
                         @guest
                                 <a class="aa-register" href="{{ route('login') }}">{{ __('Login') }}</a>  
                             @if (Route::has('register'))      
-                                    <a class="aa-login" href="{{ route('register') }}">{{ __('Register') }}</a>       
+                                    <a class="aa-login" href="{{ route('login') }}">{{ __('Register') }}</a>       
                             @endif
                         @else
                                 <a id="navbarDropdown" class="aa-login" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

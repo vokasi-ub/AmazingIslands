@@ -13,9 +13,20 @@
                       <ul class="nav nav-list tree">
                         <li><a href="tb_pulau">Tabel Pulau</a></li>
                         <li><a href="tb_inquire">Tabel Inquire</a></li>
-                        <li><a href="tb_users">Tabel Users</a></li>
+                        <li><a href="tb_user">Tabel Users</a></li>
                         <li><a href="tb_admin">Tabel Admin</a></li>
                       </ul>
                     </li>
+                    <li class="ripple">
+                    <a href="{{ route('admin.logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                     <span class="fa fa-power-off "></span>Logout</a>
+                                    <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form> 
+                      </a>
+                    </li>
                   </ul>
                 </div>
+                

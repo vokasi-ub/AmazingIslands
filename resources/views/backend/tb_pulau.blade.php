@@ -8,9 +8,9 @@
           <div class="panel box-shadow-none content-header">
                   <div class="panel-body">
                     <div class="col-md-12">
-                        <h3 class="animated fadeInLeft">Data Tables</h3>
+                        <h3 class="animated fadeInLeft">Data Table Pulau</h3>
                         <p class="animated fadeInDown">
-                          Table <span class="fa-angle-right fa"></span> Data Tables
+                          Table <span class="fa-angle-right fa"></span> Data Table Pulau
                         </p>
                     </div>
                   </div>
@@ -18,19 +18,23 @@
               <div class="col-md-12 top-20 padding-0">
                 <div class="col-md-12">
                   <div class="panel"> 
-                    <div class="panel-heading"><h3>Data Tables</h3></div>  
+                    <div class="panel-heading"><h3>Data Table Pulau</h3></div>  
                     <div class="panel-body">   
                     <a href="/create"> + Tambah Data Pulau</a>
 
                         <div id="datatables-example_filter" class="datatables-filter">
                         <form action="{{ url('query') }}" method="GET" style="float :right">
-                <div class="box-tools">
-                  <div class="input-group input-group-sm" style="width: 150px; float: right; margin-top:-25px;">
-                    <input type="text" name="q" class="form-control pull-right" placeholder="Search">
+                          <div class="box-tools">
+                            <div class="input-group input-group-sm" style="width: 150px; float: right; margin-top:-25px;">
+                              <input type="text" name="q" class="form-control pull-right" placeholder="Search Pulau...">
 
-                    <div class="input-group-btn">  
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                  </div>
+                              <div class="input-group-btn">  
+                              <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-search"></i>
+                              </button>
+                              </div>
+                            </div>
+                          </div>
                   </form>
                 </div>
                                          

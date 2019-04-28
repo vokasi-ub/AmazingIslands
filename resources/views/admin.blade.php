@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<body id="mimin" class="dashboard">
 @extends('layouts.master')
 @section('content')
 	  		
