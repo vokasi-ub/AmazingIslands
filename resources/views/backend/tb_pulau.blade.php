@@ -70,16 +70,14 @@
                             <td>USD {{ number_format($pulau->harga, 2) }}</td>
                             <td style="overflow:hidden; text-overflow:ellipsis; display: -webkit-box;
                                       -webkit-box-orient: vertical;
-                                      -webkit-line-clamp: 4;
-                                      line-height: 1.8;">
+                                      -webkit-line-clamp: 2;
+                                      line-height: 2.5;
+                                      width: 250px;">
                                 {{$pulau->deskripsi}}</td>
                             <td>
-                            <button class="edit-modal btn btn-primary" data-id="{{$pulau->id_pulau}}" data-title="{{$pulau->nama_pulau}}" data-description="{{$pulau->description}}" data-status="{{$pulau->status}}" data-luas="{{$pulau->luas}} Acress" data-nama_negara="{{$pulau->nama_negara}}" data-lokasi="{{$pulau->lokasi}}" data-harga="USD {{ number_format($pulau->harga, 2) }}">
-                              <span class="glyphicon glyphicon-eye-open"></span> Info
-                            </button>
-                                <a href="edit/{{ $pulau->id_pulau }}" class=" btn btn-sm btn-primary">Edit</a>
-                                &nbsp;
-                                <a href="hapus/{{ $pulau->id_pulau }}" class="btn btn-sm btn-danger"
+                               <a href="infopulau/{{ $pulau->id_pulau }}"  class="btn btn-sm btn-info modalMd" title="Info Data"><span class="glyphicon glyphicon-eye-open"></span></a>
+                               <a href="edit/{{ $pulau->id_pulau }}" class=" btn btn-sm btn-primary">Edit</a>&nbsp;
+                                <a href="destroy/{{ $pulau->id_pulau }}" class="btn btn-sm btn-danger"
                                 onclick="return confirm('Yakin ingin menghapus data?')">Hapus</a>
                             </td>
                         </tr>
@@ -87,6 +85,7 @@
                       </tbody>
                         </table>
                       </div>
+                      
                       <!-- /.box-body -->
             <div class="box-footer clearfix">
               <ul class="pagination pagination-sm no-margin pull-right">
@@ -104,9 +103,9 @@
               </div>  
               </div>                 
           <!-- end: content -->
+
   <!-- end: Javascript -->
   @endsection
   </body>
-  <script src="{{asset('/js/ajax-crud-modal-form.js')}}"></script>
     <script src="https://use.fontawesome.com/2c7a93b259.js"></script>
 </html>

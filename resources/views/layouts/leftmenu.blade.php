@@ -14,7 +14,6 @@
                         <li><a href="tb_pulau">Tabel Pulau</a></li>
                         <li><a href="tb_inquire">Tabel Inquire</a></li>
                         <li><a href="tb_user">Tabel Users</a></li>
-                        <li><a href="tb_admin">Tabel Admin</a></li>
                       </ul>
                     </li>
                     <li class="ripple">

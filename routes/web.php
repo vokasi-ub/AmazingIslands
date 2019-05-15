@@ -11,6 +11,8 @@ Route::get('/little', 'IndexController@little');
 Route::get('/lambay', 'IndexController@lambay');
 Route::get('/macan', 'IndexController@macan');
 Route::get('/cave', 'IndexController@cave');
+Route::get('/gallery', 'IndexController@gallery');
+Route::get('/contact', 'IndexController@contact');
 Route::post('/storeInquire', 'IndexController@storeInquire');
 
 
@@ -35,18 +37,21 @@ Route::post('/store','PulauController@store');
 Route::get('/edit/{id}','PulauController@edit');
 Route::post('/update/{id}','PulauController@update');
 Route::post('get', 'PulauController@getRequest');
-Route::get('hapus/{id}','PulauController@hapus');
+Route::get('destroy/{id}','PulauController@destroy');
 Route::post ( '/editItem', 'PulauController@editItem' );
+Route::get('/infopulau/{id}','PulauController@infopulau');
 
 // crud Inquire
 Route::get('tb_inquire', 'InquireController@index');
 Route::get('keyword', 'InquireController@paginate');
 Route::get('hapus/{id}','InquireController@hapus');
+Route::get('infoinquire/{id}','InquireController@infoinquire');
 
 // crud User
 Route::get('tb_user', 'UserController@index');
 Route::get('keywords', 'UserController@paginate2');
 Route::get('hapus/{id}','UserController@hapus');
+Route::get('infouser/{id}','UserController@infouser');
 
 //searching
 Route::get('query', 'AdminController@search');  

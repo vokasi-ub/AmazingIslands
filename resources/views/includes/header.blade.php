@@ -7,10 +7,10 @@
                 <div class="aa-header-left">
                   <div class="aa-telephone-no">
                     <span class="fa fa-phone"></span>
-                    1-900-523-3564
+                    087784150989
                   </div>
                   <div class="aa-email hidden-xs">
-                    <span class="fa fa-envelope-o"></span> info@markups.com
+                    <span class="fa fa-envelope-o"></span> naupalsidqi55@gmail.com
                   </div>
                 </div>              
               </div>
@@ -19,7 +19,7 @@
                         @guest
                                 <a class="aa-register" href="{{ route('login') }}">{{ __('Login') }}</a>  
                             @if (Route::has('register'))      
-                                    <a class="aa-login" href="{{ route('login') }}">{{ __('Register') }}</a>       
+                                    <a class="aa-login" href="{{ route('register') }}">{{ __('Register') }}</a>       
                             @endif
                         @else
                                 <a id="navbarDropdown" class="aa-login" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

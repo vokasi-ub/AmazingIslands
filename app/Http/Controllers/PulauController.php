@@ -108,36 +108,8 @@ class PulauController extends Controller
         return redirect('tb_pulau');
     }
 
-    public function editItem(Request $req) {
-        $blog = PulauModel::find ($req->id_pulau);
-        $blog->nama_pulau = $req->nama_pulau;
-        $blog->status = $req->status;
-        $blog->luas = $req->luas;
-        $blog->nama_negara = $req->nama_negara;
-        $blog->lokasi = $req->lokasi;
-        $blog->harga = $req->harga;
-        $blog->deskripsi = $req->deskripsi;
-        $blog->save();
-        return response()->json($blog);
-      }
 
-    // public function getRequest(Request $request)
-    // {
-        
-    //     if (!empty($gambar)) {
-            
-    //     }
-    //     return $request->all();
-    //     $filename = $gambar->getClientOriginalName();
-    //     $destination = base_path() . '/image/';
-    //     $gambar->move($destination, $filename);
-    //     $data = $request->all();
-    //     $data['gambar_pulau'] = $filename;
-
-    //     return $data;
-    // }
-
-    public function hapus($id)
+    public function destroy($id)
     {
         $pulau = PulauModel::where('id_pulau',$id)->first();
         $pulau->delete();
@@ -150,5 +122,11 @@ class PulauController extends Controller
         $pulau = PulauModel::where('nama_pulau', 'LIKE', '%' . $query . '%')->paginate(10);
 
         return view('backend/tb_pulau', compact('pulau', 'query'));
+    }
+
+    public function infopulau($id)
+    {
+        $pulau = PulauModel::where('id_pulau',$id)->get();
+        return view('crudPulau/infopulau',compact('pulau'));
     }
 }

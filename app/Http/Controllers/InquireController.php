@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\InquireModel;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class InquireController extends Controller
@@ -13,6 +14,7 @@ class InquireController extends Controller
     public function index() {
        
         $inquire = InquireModel::all();
+
         return view('backend/tb_inquire', compact('inquire'));
         
        
@@ -29,17 +31,6 @@ class InquireController extends Controller
         return redirect('tb_inquire')->with(['message'=> 'Wrong ID!!']);
     }
 
-    // public function paginate(Request $request)
-    // {
-    //     $query = $request->get('keyword');
-    //     $inquire = User::when($request->keyword, function ($query) use ($request) {
-    //         $query->where('email', 'like', "%{$request->keyword}%")
-    //             ->orWhere('name', 'like', "%{$request->keyword}%");
-    //     })->get();
-
-    //     return view('backend/tb_inquire', compact('inquire', 'query'));
-    // }
-
     public function paginate(Request $request)
     {
         $query = $request->get('keyword');
@@ -47,5 +38,13 @@ class InquireController extends Controller
 
         return view('backend/tb_inquire', compact('inquire', 'query'));
     }
+   
+
+    public function infoinquire($id)
+    {
+        $inquire = InquireModel::where('user_id',$id)->get();
+        return view('crudInquire/infoinquire',compact('inquire'));
+    }
+
 
 }

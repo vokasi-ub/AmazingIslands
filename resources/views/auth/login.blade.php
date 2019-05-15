@@ -63,7 +63,7 @@
             </form>
             <div class="w3layouts_more-buttn">
                <h3>Don't Have an account..?
-                  <a href="#content1"><b style="color: red">Sign Up Here</b>
+                  <a href="register"><b style="color: red">Sign Up Here</b>
                   </a>
                </h3>
             </div>

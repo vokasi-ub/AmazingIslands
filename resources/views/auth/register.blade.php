@@ -1,120 +1,108 @@
-@extends('layouts.app')
+<!--A Design by W3layouts
+   Author: W3layout
+   Author URL: http://w3layouts.com
+   License: Creative Commons Attribution 3.0 Unported
+   License URL: http://creativecommons.org/licenses/by/3.0/
+   -->
+   <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Amazing Islands </title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Gaze Sign up & login Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+         />
+      <script>
+         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+      </script>
+      <!-- Meta tags -->
+      <!--stylesheets-->
+      <link href="{{URL::asset('asset/css/style.css')}}" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+   </head>
+   <body>
+      <div class="mid-class">
+         <div class="art-right-w3ls">
+            <h2>Sign Up</h2>
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
+               <div class="main">
+                  <div class="form-left-to-w3l">
+                  <input id="name" placeholder="Nama" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                        @if ($errors->has('name'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                        @endif
+                  </div>
+                  <div class="form-left-to-w3l">
+                  <input id="email" placeholder="Email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+								@if ($errors->has('email'))
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $errors->first('email') }}</strong>
+									</span>
+								@endif
+                  </div>
+                  <div class="form-left-to-w3l">
+                  <input id="kelamin" placeholder="Kelamin" type="text" class="form-control{{ $errors->has('kelamin') ? ' is-invalid' : '' }}" name="kelamin" value="{{ old('kelamin') }}" required autofocus>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+								@if ($errors->has('kelamin'))
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $errors->first('kelamin') }}</strong>
+									</span>
+								@endif
+                  </div>
+                  <div class="form-left-to-w3l">
+                  <input id="no_hp" placeholder="No HP" type="text" class="form-control{{ $errors->has('no_hp') ? ' is-invalid' : '' }}" name="no_hp" value="{{ old('no_hp') }}" required autofocus>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                        @if ($errors->has('no_hp'))
+                           <span class="invalid-feedback" role="alert">
+                              <strong>{{ $errors->first('no_hp') }}</strong>
+                           </span>
+                        @endif
+                  </div>
+                  <div class="form-left-to-w3l">
+                  <input id="alamat" placeholder="Alamat" type="text" class="form-control{{ $errors->has('alamat') ? ' is-invalid' : '' }}" name="alamat" value="{{ old('alamat') }}" required autofocus>
 
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+								@if ($errors->has('alamat'))
+									<span class="invalid-feedback" role="alert">
+										<strong>{{ $errors->first('alamat') }}</strong>
+									</span>
+								@endif
+                  </div>
+                  <div class="form-left-to-w3l">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                  <input id="password" placeholder="Password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="kelamin" class="col-md-4 col-form-label text-md-right">{{ __('Kelamin') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="kelamin" type="text" class="form-control{{ $errors->has('kelamin') ? ' is-invalid' : '' }}" name="kelamin" value="{{ old('kelamin') }}" required autofocus>
-
-                                @if ($errors->has('kelamin'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('kelamin') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-
-                        <div class="form-group row">
-                            <label for="no_hp" class="col-md-4 col-form-label text-md-right">{{ __('No HP') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="no_hp" type="text" class="form-control{{ $errors->has('no_hp') ? ' is-invalid' : '' }}" name="no_hp" value="{{ old('no_hp') }}" required autofocus>
-
-                                @if ($errors->has('no_hp'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('no_hp') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="alamat" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="alamat" type="text" class="form-control{{ $errors->has('alamat') ? ' is-invalid' : '' }}" name="alamat" value="{{ old('alamat') }}" required autofocus>
-
-                                @if ($errors->has('alamat'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('alamat') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+                        @if ($errors->has('password'))
+                           <span class="invalid-feedback" role="alert">
+                              <strong>{{ $errors->first('password') }}</strong>
+                           </span>
+                        @endif
+                  </div>
+                  <div class="form-left-to-w3l">
+                     <input id="password-confirm" type="password" placeholder="password confirmation" class="form-control" name="password_confirmation" required>
+                  </div>
+               </div>
+               <div class="clear"></div>
+               <div class="btnn">
+                  <button type="submit">Sign Up</button>
+               </div>
+            </form>
+         
+         </div>
+         <div class="art-left-w3ls">
+            <h1 class="header-w3ls">
+               Register <hr>
+            </h1>
+         </div>
+      </div>
+      <footer class="bottem-wthree-footer">
+         
+      </footer>
+   </body>
+</html>

@@ -57,6 +57,7 @@
                             <td>{{$user->alamat}}</td>
                             <td>{{$user->kelamin}}</td>
                             <td>
+                                <a href="infouser/{{ $user->id }}"  class="btn btn-sm btn-info" title="Info Data"><span class="glyphicon glyphicon-eye-open"></span></a>
                                 <a href="hapus/{{ $user->id }}" class="btn btn-sm btn-danger"
                                 onclick="return confirm('Yakin ingin menghapus data?')">Hapus</a>
                             </td>

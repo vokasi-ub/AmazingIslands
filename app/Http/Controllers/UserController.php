@@ -28,4 +28,10 @@ class UserController extends Controller
 
         return view('backend/tb_user', compact('user', 'query'));
     }
+
+    public function infouser($id)
+    {
+        $user = User::where('id',$id)->get();
+        return view('crudUser/infouser',compact('user'));
+    }
 }

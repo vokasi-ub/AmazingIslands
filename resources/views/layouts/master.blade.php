@@ -17,6 +17,10 @@
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assetsAdmin/css/plugins/simple-line-icons.css') }}"/>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assetsAdmin/css/plugins/animate.min.css') }}"/>
       <link rel="stylesheet" type="text/css" href="{{ URL::asset('assetsAdmin/css/plugins/fullcalendar.min.css') }}"/>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>    
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+      
 	<link href="{{ URL::asset('assetsAdmin/css/style.css') }}" rel="stylesheet">
 	<!-- end: Css -->
 
@@ -347,6 +351,7 @@
             ]
         });
         // end : Calendar==========
+        
 
         // start: Maps============
 

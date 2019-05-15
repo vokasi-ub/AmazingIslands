@@ -314,7 +314,6 @@
                   <p class="form-submit">
                     <input type="submit" name="submit" class="aa-browse-btn" value="Send Message">
                   </p>        
-                  
                 </form>
               </div>
             </div>

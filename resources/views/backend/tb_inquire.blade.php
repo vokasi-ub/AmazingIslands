@@ -63,8 +63,7 @@
                             <td>{{$inquire->tanggal}}</td>
                             <td>{{$inquire->pesan}}</td>
                             <td>
-                                <a href="hapus/{{ $inquire->id_inquire }}" class="btn btn-sm btn-danger"
-                                onclick="return confirm('Yakin ingin menghapus data?')">Hapus</a>
+                            <a href="infoinquire/{{ $inquire->user_id }}"  class="btn btn-sm btn-info modalMd" title="Info Data"><span class="glyphicon glyphicon-eye-open"></span></a>
                             </td>
                         </tr>
                         @endforeach
